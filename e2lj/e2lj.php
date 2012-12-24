@@ -5,11 +5,7 @@
 	
 	if ($_POST) {
 		header('Content-type: application/json');
-		echo json_encode($_POST);
-		exit;
-
-
-		$post = p2lj($e2lj_configure['login'], $_POST['password'], $_POST['title'], $_POST['message']);
+		$post = p2lj($e2lj_configure['login'], $_POST['password'], $_POST['title'], $_POST['message'], array('taglist' => $_POST['tags']));
 		echo is_array($post) ?
 			 json_encode(
 				array(
@@ -33,11 +29,11 @@
 	<div class="article">А я текст этой записи!</div>
 	<div class="tagline" data-output="line">
 		<a href="#">test</a>, 
-		<a href="#">test</a>, 
-		<a href="#">test</a>.
+		<a href="#">test2</a>, 
+		<a href="#">test3</a>.
 	</div>
 	<ul class="tags">
 		<li>тег</li>
-		<li>тег</li>
-		<li>тег</li>
+		<li>тег2</li>
+		<li>тег3</li>
 	</ul>
