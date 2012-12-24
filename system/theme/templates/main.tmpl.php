@@ -17,7 +17,6 @@
 <? } ?>
 
 <e2:head-data />
-
 </head>
 
 <body>

@@ -1,8 +1,9 @@
 function e2lj(ljPassword, titleSelector, articleSelector, tagsList) {
-    var targetUrl = 'e2lj.php';
+    var targetUrl = 'e2lj/e2lj.php';
+
     $.post(
     targetUrl, {
-        password: $(ljPassword).val().trim(),
+        password: ljPassword.trim(),
         title: $(titleSelector).text().trim(),
         message: $(articleSelector).html().trim(),
         tags: e2parseTags(tagsList)
