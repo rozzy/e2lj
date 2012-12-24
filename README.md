@@ -57,6 +57,28 @@ All needed params:
   e2lj(string @login, string @password, string @titleSelector, string @articleSelector, string @tagsSelector);
 ```
 
+## Configuration
+**e2lj** has its own configuration file in `e2lj/configuration.php`.
+You will find an array with following parameters:  
+  — `enable-e2lj` — Enable script  
+      **true** or **false** (false by default)  
+  
+  — `login` — login in lj-system (will display an input on **false**,**empty** or **not defined**)  
+  — `init-login` — default value in input (shows only when `login` false, empty, undefined)  
+  — `password` — password (see login)  
+  — `init-password` — default value in input (see init-login)  
+  
+  — `text-on-button` — text on button  
+  — `text-on-publish` — text near button on publish  
+  
+  — `entry-prefix` — will prepend article text  
+  — `entry-postfix` — will append article text  
+  
+  — `import-tags` — parse or not tags  
+    **true** or **false** (false on empty)  
+  — `permanent-tags` — permanent tags will append article tags  
+    
+  — `additional-settings` — **array** (look `props` in p2lj() https://github.com/rozzy/p2lj#p2lj)
 ## Under the hood
 What about engine?
 
