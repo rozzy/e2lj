@@ -8,14 +8,20 @@ function e2lj(ljPassword, titleSelector, articleSelector, tagsList, otherJSON) {
         message: $(articleSelector).html().trim(),
         tags: e2parseTags(tagsList),
         otherInfo: (otherJSON || {}),
-        currentPage: window.location,
+        currentPage: window.location.href,
         send: 'post'
     },
     function (response) {
-        console.log(response);
+        if (response.success) {
+            $('.e2lj-fulllink').html('<a href="'+response.url+'" target="blank">'+response.url+'</a>');
+            $('.e2lj-fh,.e2lj-fs').toggle(0);
+        } else {
+            $('.e2lj-accent').css('background', '#FA9B9B');
+            $('#e2lj-password').focus();
+        }
     },
     'json');
-}
+};
 
 function e2parseTags(selector) {
     var output = '';
