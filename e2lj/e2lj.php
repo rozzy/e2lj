@@ -7,13 +7,12 @@
 	?>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<script type="text/javascript" src="e2lj.min.js"></script>
-	<form action="" method="post">
-		<input type="password" name="password" id="pass"> <input type="submit" value="e2lj" onclick="e2lj('#pass', 'h1', '.article', 'tags')">
-		<h1>Привет, я заголовок</h1>
-		<div class="article">А я текст этой записи!</div>
-		<ul class="tags">
-			<li>тег</li>
-			<li>тег</li>
-			<li>тег</li>
-		</ul>
-	</form>
+	
+	<input type="password" name="password" id="pass"> <input type="button" value="e2lj" onclick="e2lj('#pass', 'h1', '.article', 'tags')">
+	<h1>Привет, я заголовок</h1>
+	<div class="article">А я текст этой записи!</div>
+	<ul class="tags">
+		<li>тег</li>
+		<li>тег</li>
+		<li>тег</li>
+	</ul>
