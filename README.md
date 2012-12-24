@@ -71,3 +71,40 @@ It needs at least 4 required params for work:
     $features //@array [optional]
   )
 ```
+
+I don't recommend you to edit backend-files, but do it for your own risk.
+
+What about **client-side**?  
+It's little bit interesting. When you pass all needed params to `e2lj()`, it will parse all your data and create an JSON-array for sending on server.
+This JSON will include:  
+  — `password`  
+  — `title`  
+  — `message`  
+  — `tags`  
+  — `otherInfo` (JSON-array, look `props` in p2lj() https://github.com/rozzy/p2lj#p2lj)    
+  — `currentPage`: `window.location.href`  
+  — `send`: `post` (required params)  
+
+What about tags?
+Hmm, i thought and thought and in final i have wrote a smart function, that parses data of your element and make it readable.
+
+There is an little example.
+Imagine, that you have tags-structure like in default theme:
+```html
+  <div class="tags">
+    <a href="#">babushka</a> &nbsp; 
+    <a href="#">vodka</a> &nbsp; 
+    <a href="#">bears</a>  
+  </div>
+```
+My function will collect all between your `a`–tags and output it as «babushka,vodka,bears».
+You should call only `e2lj(login, pass, 'h1', '.article', '.tags')`.
+
+What if you have something like this:
+```html
+  <span class="tags"><a href="#">babushka</a>, <a href="#">vodka</a>, <a href="#">bears</a>.</span>
+```
+Nothing special, it will clean your line from unnecessary symbols like `,` and `.` in the end. You should only define attribute `data-output="line"`.
+```html
+  <span class="tags" data-output="line"><a href="#">babushka</a>, <a href="#">vodka</a>, <a href="#">bears</a>.</span>
+```
