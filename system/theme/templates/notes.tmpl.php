@@ -10,22 +10,6 @@
 
 <? // TITLE // ?>
 
-
-
-
-
-
-
-<a onclick="e2lj(prompt('Enter your password'), 'h1', '.text.published', '.tags')">TEST</a>
-
-
-
-
-
-
-
-
-
 <h1 class="<?= $note['published?']? 'published' : 'draft' ?> <?= $note['visible?']? 'visible' : 'hidden' ?> e2-smart-title"><?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?>
 
 <span class="icons">
@@ -94,6 +78,10 @@ echo implode (' &nbsp; ', $tags)
 ?>
 </div>
 <? endif; ?>
+
+<? if (@$note['published?'] and !$content['pages']['timeline?']): ?>
+  <? _T('e2lj') ?>
+<? endif ?>
 
 
 <? if ($note['comments-link?']): ?>
