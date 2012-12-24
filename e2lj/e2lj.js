@@ -15,9 +15,11 @@ function e2lj(ljPassword, titleSelector, articleSelector, tagsList, otherJSON) {
         if (response.success) {
             $('.e2lj-fulllink').html('<a href="'+response.url+'" target="blank">'+response.url+'</a>');
             $('.e2lj-fh,.e2lj-fs').toggle(0);
+            return true;
         } else {
             $('.e2lj-accent').css('background', '#FA9B9B');
             $('#e2lj-password').focus();
+            return false;
         }
     },
     'json');

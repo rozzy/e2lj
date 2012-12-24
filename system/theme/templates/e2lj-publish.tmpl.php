@@ -1,0 +1,1 @@
+<label for="e2lj-checkbox">Отправить в ЖЖ</label>

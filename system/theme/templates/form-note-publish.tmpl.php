@@ -45,7 +45,7 @@ document.getElementById ('gmt-offset').value = - d.getTimezoneOffset()
       <?= @$content['form-note-publish']['submit-text'] ?>
     </button>
     <div class="e2lj-chbx">
-      <input type="checkbox" id="e2lj-checkbox"> <label for="e2lj-checkbox">Отправить в ЖЖ</label>
+      <input type="checkbox" id="e2lj-checkbox"> <?_T('e2lj-publish')?>
     </div>
   </div>
 
