@@ -32,7 +32,6 @@
 <? endif ?>
 
 <? endif ?>
-
 </span>
 
 </h1>
@@ -49,7 +48,6 @@
 <p class="date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></p>
 
 <? } ?>
-
 
 
 <? // TEXT // ?>
@@ -79,10 +77,6 @@ echo implode (' &nbsp; ', $tags)
 </div>
 <? endif; ?>
 
-<? if (@$note['published?'] and !$content['pages']['timeline?']): ?>
-  <? _T('e2lj') ?>
-<? endif ?>
-
 <? if ($note['comments-link?']): ?>
 <div class="comments-link"><span class="comments-link-icon"></span>
 <? if ($note['comments-count']) { ?>
@@ -108,6 +102,10 @@ echo implode (' &nbsp; ', $tags)
   <? } ?>
   <div class="toolbar-end"></div>
 </div>
+<? endif ?>
+
+<? if (@$note['published?'] and !$content['pages']['timeline?']): ?>
+  <? _T('e2lj') ?>
 <? endif ?>
 
 </div>

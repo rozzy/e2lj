@@ -1,4 +1,4 @@
-function e2lj(ljPassword, titleSelector, articleSelector, tagsList) {
+function e2lj(ljPassword, titleSelector, articleSelector, tagsList, otherJSON) {
     var targetUrl = 'e2lj/e2lj.php';
 
     $.post(
@@ -6,7 +6,10 @@ function e2lj(ljPassword, titleSelector, articleSelector, tagsList) {
         password: ljPassword.trim(),
         title: $(titleSelector).text().trim(),
         message: $(articleSelector).html().trim(),
-        tags: e2parseTags(tagsList)
+        tags: e2parseTags(tagsList),
+        otherInfo: (otherJSON || {}),
+        currentPage: window.location,
+        send: 'post'
     },
     function (response) {
         console.log(response);
