@@ -2,16 +2,15 @@ function e2lj(ljPassword, titleSelector, articleSelector, tagsList) {
     var targetUrl = 'e2lj.php';
     $.post(
     targetUrl, {
-        password: $(ljPassword).val(),
-        title: $(titleSelector).text(),
-        message: $(articleSelector).html(),
+        password: $(ljPassword).val().trim(),
+        title: $(titleSelector).text().trim(),
+        message: $(articleSelector).html().trim(),
         tags: e2parseTags(tagsList)
     },
-
     function (response) {
         console.log(response);
     },
-        'json');
+    'json');
 }
 
 function e2parseTags(selector) {
@@ -25,5 +24,5 @@ function e2parseTags(selector) {
 	    });
     } else output = $(selector).text();
 
-    return output.replace(/\,\s{1,}/gi, ',').replace(/\s{1,}\,/gi, ',').replace(/\,{2,}/, ',').replace(/\.|\,{1,}$/gi,'');
+    return output.replace(/\,\s{1,}/gi, ',').replace(/\s{1,}\,/gi, ',').replace(/\,{2,}/, ',').replace(/\.|\,{1,}$/gi,'').trim();
 }
