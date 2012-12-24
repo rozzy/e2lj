@@ -8,12 +8,11 @@
 <? _CSS ('main') ?>
 <? _JS ('main') ?>
 
-<? _JS('e2lj/e2lj') ?>
-<? _CSS('e2lj/e2lj') ?>
-
 <? if ($content['sign-in']['done?']) { ?>
-<? _CSS ('admin') ?>
-<? _JS ('admin') ?>
+	<? _CSS ('admin') ?>
+	<? _JS ('admin') ?>
+	<? _JS('e2lj/e2lj') ?>
+	<? _CSS('e2lj/e2lj') ?>
 <? } ?>
 
 <e2:head-data />

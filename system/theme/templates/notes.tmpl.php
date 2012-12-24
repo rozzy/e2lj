@@ -83,7 +83,6 @@ echo implode (' &nbsp; ', $tags)
   <? _T('e2lj') ?>
 <? endif ?>
 
-
 <? if ($note['comments-link?']): ?>
 <div class="comments-link"><span class="comments-link-icon"></span>
 <? if ($note['comments-count']) { ?>
