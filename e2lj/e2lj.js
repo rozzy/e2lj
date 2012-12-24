@@ -9,8 +9,12 @@ function e2lj (ljPassword, titleSelector, articleSelector, tagsList) {
 			tags: e2parseTags(tagsList)
 		},
 		function (response) {
-			alert(response);
+			console.log(response);
 		}, 
 		'json'
 	);
+}
+
+function e2parseTags (selector) {
+	return $(selector).text();
 }
