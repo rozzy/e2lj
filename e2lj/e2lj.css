@@ -49,6 +49,10 @@
 	display: inline-block;
 }
 
+.e2lj-accent.yellow {
+	background: #F0F0C0;
+}
+
 .e2lj-chbx {
 	display: inline-block;
 	margin-left: 10px;

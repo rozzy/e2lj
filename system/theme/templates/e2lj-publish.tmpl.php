@@ -1,1 +1,1 @@
-<label for="e2lj-checkbox">РћС‚РїСЂР°РІРёС‚СЊ РІ Р–Р–</label>
+<label for="e2lj-checkbox">Отправить в жж</label>

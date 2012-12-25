@@ -3,18 +3,16 @@
 		'enable-e2lj' => true,
 
 		'login' => 'navalny',
-		'init-login' => 'navalny',
-		'password' => 'qwertykremlin',
 		'init-password' => 'qwertykremlin',
 
-		'text-on-button' => 'Пост в ЖЖ',
-		'text-on-publish' => 'Отправить в ЖЖ',
+		'text-on-button' => 'Пост в жж',
+		'text-on-publish' => 'Отправить в жж',
 
-		'entry-prefix' => 'Its a prefix!<br/>',
-		'entry-postfix' => '<br/><br/><a href="{url}" title="{title}">Оригинал</a>',
+		'entry-prefix' => '',
+		'entry-postfix' => '',
 
 		'import-tags' => true,
-		'permanent-tags' => 'permanent,e2taglist',
+		'permanent-tags' => '',
 
 		'additional-settings' => array () /* look `props` in p2lj() https://github.com/rozzy/p2lj#p2lj  */
 	);
