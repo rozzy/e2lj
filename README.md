@@ -1,4 +1,4 @@
-e2lj
+e2lj [![endorse](http://api.coderwall.com/rozzy/endorsecount.png)](http://coderwall.com/rozzy)
 ====
 
 [Blog Engine E2](http://blogengine.ru/) (Aegea) → [LiveJournal.com](http://livejournal.com/) crosspost system.
